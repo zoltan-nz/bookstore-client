@@ -1,7 +1,17 @@
-# Bookstore
+# Bookstore Ember.js Frontend
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Based on [this](http://emberigniter.com/modern-bridge-ember-and-rails-5-with-json-api/) tutorial.
+
+## Implementation log
+
+### Initialize the project
+
+    ember new bookstore
+
+Update `bower.json`
+
+    "ember": "2.0",
+    "ember-data": "2.0"
 
 ## Prerequisites
 
