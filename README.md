@@ -13,6 +13,40 @@ Update `bower.json`
     "ember": "2.0",
     "ember-data": "2.0"
 
+### Generate models
+
+    ember generate resource books title:string price:number author:belongs-to publisher:belongs-to
+    ember g resource authors name:string books:has-many
+    ember g resource publishing-houses name:string discount:number books:has-many
+
+    ember g adapter application
+    ember g serializer application
+
+### Setup JSON API adapter and serializer
+
+`app/adapters/application.js`
+
+    import DS from 'ember-data';
+
+    export default DS.JSONAPIAdapter.extend();
+
+`app/serializer/application.js`
+
+    import DS from 'ember-data';
+
+    export default DS.JSONAPISerializer.extend();
+
+### Run the client
+
+Make sure that your Rails Api app is already running
+
+    ember server --proxy http://localhost:3000
+
+### Create Publisher model
+
+    ember g model publisher
+
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
