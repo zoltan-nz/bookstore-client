@@ -46,6 +46,32 @@ Make sure that your Rails Api app is already running
 
     ember g model publisher
 
+### Update routes and list all books on home page
+
+`app/router.js`
+
+    Router.map(function() {
+      this.route('books', { path: '/' });
+      this.route('author', { path: '/author/:author_id' });
+    });
+
+Download model in router
+
+`app/routes/books.js`
+
+    model() {
+      return this.store.findAll('book');
+    }
+
+Add a list in `templates/books.hbs`
+
+    <ul>
+      {{#each model as |book|}}
+          <li>
+              <strong>{{book.title}}</strong> <em>by</em> {{book.author.name}}
+          </li>
+      {{/each}}
+    </ul>
 
 ## Prerequisites
 
