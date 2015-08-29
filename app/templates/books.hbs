@@ -1,7 +1,15 @@
-<ul>
+<div class="row">
+
   {{#each model as |book|}}
-      <li>
-          <strong>{{book.title}}</strong> <em>by</em> {{book.author.name}}
-      </li>
+    <div class="col-sm-4">
+      <div class="panel panel-info">
+        <div class="panel-body">
+          {{book.author.name}}
+          <h4>{{book.title}}</h4>
+        </div>
+        <div class="panel-footer">{{book.publisher.name}}</div>
+      </div>
+    </div>
   {{/each}}
-</ul>
+
+</div>

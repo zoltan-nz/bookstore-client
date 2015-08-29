@@ -73,6 +73,16 @@ Add a list in `templates/books.hbs`
       {{/each}}
     </ul>
 
+### Add Sass version from Bootstrap
+
+ember-cli-sass repo: [link](https://github.com/aexmachina/ember-cli-sass)
+ember-cli-bootstrap-sassy repo: [link](https://github.com/lifegadget/ember-cli-bootstrap-sassy)
+
+    ember install ember-cli-sass 
+    ember install ember-cli-bootstrap-sassy
+    
+Add container to `application.hbs` and boxes to `books.hbs`
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
