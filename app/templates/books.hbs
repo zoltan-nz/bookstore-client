@@ -1,13 +1,11 @@
 <div class="row">
 
   {{#each model as |book|}}
-    <div class="col-sm-4">
-      <div class="panel panel-info">
-        <div class="panel-body">
-          {{book.author.name}}
-          <h4>{{book.title}}</h4>
-        </div>
-        <div class="panel-footer">{{book.publisher.name}}</div>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail book-item">
+        <h5>{{#link-to 'author' book.author.id}}{{book.author.name}}{{/link-to}}</h5>
+        <h4>{{book.title}}</h4>
+        <p>{{book.publisher.name}}</p>
       </div>
     </div>
   {{/each}}

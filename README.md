@@ -80,8 +80,15 @@ ember-cli-bootstrap-sassy repo: [link](https://github.com/lifegadget/ember-cli-b
 
     ember install ember-cli-sass 
     ember install ember-cli-bootstrap-sassy
-    
-Add container to `application.hbs` and boxes to `books.hbs`
+
+* Add `navbar` partial.
+* Add container to `application.hbs` and boxes to `books.hbs`
+* Add extra styles to `styles/app.scss`
+
+### Create Author page
+
+* Create `routes/author.js`
+* Create `templates/author.hbs`
 
 ## Prerequisites
 

@@ -1,8 +1,19 @@
-<div class="header clearfix">
-  <nav>
-    <ul class="nav nav-pills pull-right">
-      {{#link-to 'application' tagName="li"}}<a href>Home</a>{{/link-to}}
-    </ul>
-  </nav>
-  <h3 class="text-muted">Bookstore</h3>
-</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{#link-to 'books' class="navbar-brand"}}Bookstore{{/link-to}}
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav">
+            {{#link-to 'application' tagName="li"}}<a href>Home</a>{{/link-to}}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
