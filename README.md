@@ -90,6 +90,16 @@ ember-cli-bootstrap-sassy repo: [link](https://github.com/lifegadget/ember-cli-b
 * Create `routes/author.js`
 * Create `templates/author.hbs`
 
+### Add simple limitation/pagination
+
+Create a books controller.
+
+    ember g controller books
+
+* Update `routes/books.js`
+* Update `controllers/books.js`
+* Insert limit buttons in `templates/books.hbs`
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

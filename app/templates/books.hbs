@@ -9,5 +9,17 @@
       </div>
     </div>
   {{/each}}
+</div>
 
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <div class="btn-group">
+    {{#link-to 'books' (query-params limit="1") class="btn btn-info"}}1{{/link-to}}
+    {{#link-to 'books' (query-params limit="5") class="btn btn-info"}}5{{/link-to}}
+    {{#link-to 'books' (query-params limit="10") class="btn btn-info"}}10{{/link-to}}
+    {{#link-to 'books' (query-params limit="20") class="btn btn-info"}}20{{/link-to}}
+    {{#link-to 'books' (query-params limit="100") class="btn btn-info"}}100{{/link-to}}
+    {{#link-to 'books' (query-params limit=total) class="btn btn-info"}}Show All{{/link-to}}
+    </div>
+  </div>
 </div>

@@ -1,7 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('book');
+
+  queryParams: {
+    limit: {
+      refreshModel: true
+    }
+  },
+
+  model(params) {
+    return this.store.query('book', params);
   }
+
 });
