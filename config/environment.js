@@ -40,7 +40,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APIfolder = '/api';
+    ENV.baseURL = '/bookstore-client';
+    ENV.host = 'https://bookstore-api.herokuapp.com';
   }
 
   return ENV;
