@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 
   queryParams: {
     limit: {
-      refreshModel: true
+      refreshModel: false
     }
   },
 

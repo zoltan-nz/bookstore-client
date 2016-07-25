@@ -16,10 +16,17 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://bookstore-api.herokuapp.com"
+    },
+
   };
 
   if (environment === 'development') {
+    ENV.host = 'https://bookstore-api.herokuapp.com';
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -40,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/bookstore-client';
+    // ENV.baseURL = '/bookstore-client';
     ENV.host = 'https://bookstore-api.herokuapp.com';
   }
 
